@@ -11,11 +11,23 @@ item.addEventListener("keyup",function(event){
 
 item.addEventListener("keyup", function (event) {
   if (event.key == "Enter") {
-    console.log(this.value); //Here ,This refers to the item id that is the id of input box
+    addToDo(this.value);
+    //Here this refers to item and item is the id of input box
+    // and we are geetting value through value property
+    //addToDo is a function that is called and passing the value to the addToDo function
     this.value = "";
+    // After getting the value we have to delete it from input box so that our input box can be empty
   }
 });
 
 const addToDo = (item) => {
-  const listItem = document.createElement("li"); // for creating a list item
+  // For creating a new list
+  //item is a parameter which is receiving the value from input box
+  const listItem = document.createElement("li");
+  listItem.innerHTML=` 
+                       ${item}    
+                       <i class="fa-solid fa-xmark"></i>`;
+  // item is the content of input box so here input text would be embedded.
+  
 };
+
