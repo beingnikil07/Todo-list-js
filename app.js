@@ -15,3 +15,7 @@ item.addEventListener("keyup", function (event) {
     this.value = "";
   }
 });
+
+const addToDo = (item) => {
+  const listItem = document.createElement("li"); // for creating a list item
+};
