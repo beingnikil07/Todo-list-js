@@ -54,3 +54,15 @@ ul li i {
   background-color: #95a5a6;
   color: black ;
 }
+
+
+
+/*********Responsive design *******************/
+
+@media screen and (min-width:700px) {
+   .box{
+    max-height:100%;
+    max-width: 100%;
+   
+   }
+}
