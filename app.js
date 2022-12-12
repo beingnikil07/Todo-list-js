@@ -28,8 +28,11 @@ const addToDo = (item) => {
                        ${item}    
                        <i class="fa-solid fa-xmark"></i>`;
   // item is the content of input box so here input text would be embedded.
-  
-  todoBox.appendChild(listItem);  
-  //todoBox contains the id to unorder list so we append child on todoBox
-  // listItem contains the new list that's why we have given it to the appendChild
+
+  todoBox.appendChild(listItem);
+  listItem.addEventListener("click", () => {
+    // classList listItem ke saari class kiii list nikalega aur toggle karayega
+    // toggle ka matlab hota hai add karna remove karna add karna remove karna samjhe
+    listItem.classList.toggle("done");
+  });
 };
