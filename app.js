@@ -1,38 +1,26 @@
 const item = document.querySelector("#item");
 const todoBox = document.querySelector("#todo-box");
 
-/* 
-     *****Below code shows you what actually what keyup event does ****** 
-item.addEventListener("keyup",function(event){    
-    console.log(event.key);
-});
-
-*/
-
 item.addEventListener("keyup", function (event) {
   if (event.key == "Enter") {
     addToDo(this.value);
-    //Here this refers to item and item is the id of input box
-    // and we are geetting value through value property
-    //addToDo is a function that is called and passing the value to the addToDo function
     this.value = "";
-    // After getting the value we have to delete it from input box so that our input box can be empty
   }
 });
 
 const addToDo = (item) => {
-  // For creating a new list
-  //item is a parameter which is receiving the value from input box
-  const listItem = document.createElement("li");
-  listItem.innerHTML = ` 
-                       ${item}    
-                       <i class="fa-solid fa-xmark"></i>`;
-  // item is the content of input box so here input text would be embedded.
+  const listItem = document.createElement("li"); // Created list item element
+  listItem.innerHTML = `                  
+                       ${item}                   
+                       <i class="fa-solid fa-xmark"></i>`; //item refer to input box
 
-  todoBox.appendChild(listItem);
   listItem.addEventListener("click", () => {
-    // classList listItem ke saari class kiii list nikalega aur toggle karayega
-    // toggle ka matlab hota hai add karna remove karna add karna remove karna samjhe
     listItem.classList.toggle("done");
   });
+
+  listItem.querySelector("i").addEventListener("click", () => {
+    listItem.remove();           
+  });
+
+  todoBox.appendChild(listItem);
 };
