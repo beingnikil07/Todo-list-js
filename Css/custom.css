@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; /* so that it applied overall document */
+}
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: #1abc9c;
+  display: flex; /* Parent ke upper lagate hai flex property */
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 600px;
+  min-height: 500px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+}
+#item {
+  display: block;
+  /* kyuki input pehle se inline hote hai */
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  font-size: 20px;
+  outline: 0;
+  box-shadow: 0px 0px 2px grey;
+  font-weight: bold;
+}
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+}
+ul li {
+  background-color: #34495e;
+  color: whitesmoke;
+  padding: 10px;
+  position: relative;
+  text-align: left;
+  font-size: 15.5px;
+}
+ul li i {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
