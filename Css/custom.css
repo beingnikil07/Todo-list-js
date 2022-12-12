@@ -42,9 +42,15 @@ ul li {
   position: relative;
   text-align: left;
   font-size: 15.5px;
+  margin: 5px;
 }
 ul li i {
   position: absolute;
   right: 10px;
   top: 15px;
+}
+.done{
+  text-decoration: line-through;
+  background-color: #1abc9c;
+  color: black ;
 }

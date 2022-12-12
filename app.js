@@ -24,10 +24,12 @@ const addToDo = (item) => {
   // For creating a new list
   //item is a parameter which is receiving the value from input box
   const listItem = document.createElement("li");
-  listItem.innerHTML=` 
+  listItem.innerHTML = ` 
                        ${item}    
                        <i class="fa-solid fa-xmark"></i>`;
   // item is the content of input box so here input text would be embedded.
   
+  todoBox.appendChild(listItem);  
+  //todoBox contains the id to unorder list so we append child on todoBox
+  // listItem contains the new list that's why we have given it to the appendChild
 };
-
